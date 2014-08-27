@@ -32,15 +32,15 @@
 %                         Start here
 % --------------------------------------------------------------
  
-\title{Weekly Homework X}%replace X with the appropriate number
-\author{Tony Stark\\ %replace with your name
+\title{Problem set 1}%replace X with the appropriate number
+\author{Ingolf D. Petersen\\ %replace with your name
 MIT OpenCourseWare \\
-Practical Programming in C} %if necessary, replace with your course title
+6.087 Practical Programming in C} %if necessary, replace with your course title
  
 \maketitle
 \section*{Description}
 Solutions to problem set 1 from the course 
-\href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/index.htm}{"Practical Programming in C" from MIT's OpenCourseWare}.
+\href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/index.htm}{"Practical Programming in C" from MIT's OpenCourseWare}. I do not own any of the teaching materials presented. Materials used under the creative commons license (see \href{http://ocw.mit.edu/terms/}{http://ocw.mit.edu/terms/}).
 
 
 \section*{Problem 1.1}
@@ -112,6 +112,70 @@ double ans = 2.0;
 \end{lstlisting}
 
 \section*{Problem 1.3}
+
+\begin{lstlisting}[frame=single, language=bash, breaklines=true]
+ingodav@ingodav-PC /cygdrive/e/Dropbox/courses/online_courses/OCW_Practical_Programming_in_C/problemSet1
+$ gcc  -g  -O0  -Wall  hello.c  -o hello.o
+
+ingodav@ingodav-PC /cygdrive/e/Dropbox/courses/online_courses/OCW_Practical_Programming_in_C/problemSet1
+$ gdb hello.o
+GNU gdb (GDB) 7.6.50.20130728-cvs (cygwin-special)
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "i686-pc-cygwin".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+..
+Reading symbols from /cygdrive/e/Dropbox/courses/online_courses/OCW_Practical_Programming_in_C/problemSet1/hello.o...done.
+(gdb) run
+Starting program: /cygdrive/e/Dropbox/courses/online_courses/OCW_Practical_Programming_in_C/problemSet1/hello.o
+[New Thread 3832.0x2440]
+[New Thread 3832.0x20bc]
+hello,  6.087  students
+[Inferior 1 (process 3832) exited normally]
+(gdb) quit
+
+ingodav@ingodav-PC /cygdrive/e/Dropbox/courses/online_courses/OCW_Practical_Programming_in_C/problemSet1
+$
+\end{lstlisting}
+
+\section*{Problem 1.4}
+\lstinputlisting[language=C, frame=single]{base.c}
+
+\section*{Problem 1.5}
+\subsection*{a)}
+Includes do not need a semicolon to end the statement. Correct version:
+\begin{lstlisting}[frame=single, language=bash, breaklines=true]
+#include <stdio.h>
+\end{lstlisting}
+
+\subsection*{b)}
+Type mismatch in function definition. The function returns an integer but accepts a void input argument. Correct version:
+
+\begin{lstlisting}[frame=single, language=bash, breaklines=true]
+int function(int arg1)
+{
+  return  arg1-1;
+}
+\end{lstlisting}
+
+\subsection*{c)}
+The assignment operator should not be used when using \#define.
+\begin{lstlisting}[frame=single, language=bash, breaklines=true]
+#define MESSAGE "Happy  new  year!"
+puts(MESSAGE);
+\end{lstlisting}
+
+
+
  
 % --------------------------------------------------------------
 %     You don't have to mess with anything below this line.
