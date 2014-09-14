@@ -1,0 +1,94 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{hyperref}
+\usepackage{listings}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+\title{Problem set 2}%replace X with the appropriate number
+\author{Ingolf D. Petersen\\ %replace with your name
+MIT OpenCourseWare \\
+6.087 Practical Programming in C} %if necessary, replace with your course title
+ 
+\maketitle
+\section*{Description}
+Solutions to problem set 2 from the course 
+\href{http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/index.htm}{"Practical Programming in C" from MIT's OpenCourseWare}. I do not own any of the teaching materials presented. Materials used under the creative commons license (see \href{http://ocw.mit.edu/terms/}{http://ocw.mit.edu/terms/}).
+
+
+\section*{Problem 2.1}
+On a 64 bit machine the following results are obtained. NOTE: Using 32 bit Cygwin.
+
+\begin{table}[h!tb]
+	\centering
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Type}          & \textbf{Size (bytes)} \\ \hline
+    char          & 1            \\
+    unsigned char & 1            \\
+    short         & 2            \\
+    int           & 4            \\
+    unsigned int  & 4            \\
+    unsigned long & 4            \\
+    float         & 4            \\
+    \hline
+    \end{tabular}
+\end{table}
+
+\lstinputlisting[language=C, frame=single]{p1.c}
+
+\section*{Problem 2.2}
+
+
+
+%\subsection*{b)}
+%\begin{itemize}
+%\item \textbf{7}: The number seven. Integer or another numerical type.
+%\item \textbf{"7"}: A null terminated array of characters.
+%\item \textbf{'7'}: The character 7.
+%\end{itemize}
+%
+%\subsection*{c)}
+%\begin{lstlisting}[frame=single, language=C]
+%double ans = 10.0+2.0/((3.0-2.0)*2.0);
+%\end{lstlisting}
+
+%%%%%%%%%%%%%%
+% Problem 1.2
+%%%%%%%%%%%%%%
+
+
+
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
